@@ -1,9 +1,9 @@
 {
-  "name": "xep-whois",
-  "version": "1.0.2",
+  "name": "whois-ts",
+  "version": "0.0.2",
   "author": {
-    "name": "Oshan Mendis",
-    "email": "oshanm@xeptagon.com"
+    "name": "Jacek Głogosz",
+    "email": "jacek.glogosz@gmail.com"
   },
   "description": "A lightweight WHOIS client",
   "main": "./dist/esm/index.js",
@@ -21,37 +21,38 @@
     "node",
     "nodejs",
     "js",
-    "javascript"
+    "javascript",
+    "typescript"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/xeptagondev/xep-whois"
+    "url": "git://github.com/w473/whois-ts"
   },
-  "homepage": "https://github.com/xeptagondev/xep-whois#readme",
+  "homepage": "https://github.com/w473/whois-ts#readme",
   "bugs": {
-    "url": "https://github.com/xeptagondev/xep-whois/issues"
+    "url": "https://github.com/w473/whois-ts/issues"
   },
-
   "scripts": {
-    "devBuild": "yarn install && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "build": "yarn install --production && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "prepublishOnly": "yarn install --production && yarn run build",
-    "test": "jest --coverage"
+    "devBuild": "npm install && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "clean": "rm -rf ./dist/",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "test": "jest",
+    "test:cov": "jest --coverage"
   },
   "files": [
     "dist/"
   ],
   "devDependencies": {
-    "@types/jest": "^29.2.3",
-    "jest": "^29.3.1",
-    "ts-jest": "^29.0.3",
-    "typescript": "^4.8.4"
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.4"
   },
   "dependencies": {
-    "@types/node": "^18.11.9",
-    "node-fetch": "2",
-    "socks": "^2.7.1",
-    "typedoc": "^0.24.8"
+    "@types/node": "^20.12.5",
+    "node-fetch": "2.7.0",
+    "socks": "^2.8.1"
   },
-  "types": "./dist/esm/index.d.ts"
+  "types": "./dist/esm/index.d.ts",
+  "registry": "https://registry.npmjs.org"
 }
