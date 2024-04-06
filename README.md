@@ -88,13 +88,13 @@ br.com,cn.com,de.com,eu.com,gb.com,gb.net,gr.com,hu.com,in.net,no.com,qc.com,ru.
 ## Global
 
 ```shell 
-npm install -g xep-whois 
+npm install -g whois-ts 
 ```
 
 ## Local
 
 ```shell 
-npm install xep-whois 
+npm install whois-ts
 ```
 
 # Examples
@@ -102,7 +102,7 @@ npm install xep-whois
 ## Basic usage
 
 ```typescript
-import { whois } from 'xep-whois';
+import { whois } from 'whois-ts';
 
 var domain = 'google.com';
 var res = await whois(domain);
@@ -113,7 +113,7 @@ console.log(res);
 ## Define WHOIS server and parse data
 
 ```typescript
-import { whois, WhoIsOptions } from 'xep-whois';
+import { whois, WhoIsOptions } from 'whois-ts';
 
 var domain = 'google.com';
 var host = 'whois.verisign-grs.com';
@@ -132,7 +132,7 @@ console.log(res.parsedData);
 ## Define which data to be parsed
 
 ```typescript
-import { whois, WhoIsOptions } from 'xep-whois';
+import { whois, WhoIsOptions } from 'whois-ts';
 
 var domain = 'google.com';
 
@@ -153,7 +153,7 @@ console.log(res.parsedData);
 ## Collect WHOIS data through a proxy (SOCKS4 or SOCKS5)
 
 ```typescript
-import { whois, WhoIsOptions } from 'xep-whois';
+import { whois, WhoIsOptions } from 'whois-ts';
 
 var domain = 'google.com';
 var proxyIp = 'your.proxy.ip';
@@ -175,7 +175,7 @@ console.log(res.parsedData);
 ## Collect WHOIS data through a proxy (With authentication)
 
 ```typescript
-import { whois, WhoIsOptions } from 'xep-whois';
+import { whois, WhoIsOptions } from 'whois-ts';
 
 var domain = 'google.com';
 var proxyIp = 'your.proxy.ip';
@@ -200,7 +200,7 @@ console.log(res.parsedData);
 
 ## Collect WHOIS data for multiple domains (parallelly with options)
 ```typescript
-import { batchWhois, WhoIsOptions } from 'xep-whois';
+import { batchWhois, WhoIsOptions } from 'whois-ts';
 
 var domains = ['google.com', 'abc.com', 'example.com'];
 var isParallel = true;
@@ -224,7 +224,7 @@ for (let i = 0; i < res.length; i++) {
 
 ## Collect WHOIS data for multiple domains through a proxy (parallelly with options)
 ```typescript
-import { batchWhois, WhoIsOptions } from 'xep-whois';
+import { batchWhois, WhoIsOptions } from 'whois-ts';
 
 var domains = ['google.com', 'abc.com', 'example.com'];
 var isParallel = true;
@@ -259,7 +259,7 @@ for (let i = 0; i < res.length; i++) {
 
 # Documentation
 
-The API documentation can be found here: [Xep-whois API](https://xeptagondev.github.io/xep-whois/)
+The API documentation can be found here: [whois-ts API](https://xeptagondev.github.io/xep-whois/)
 
 # Acknowledgements
 
@@ -274,4 +274,4 @@ Xep-whois is available under the [BSD (3-Clause) License](https://opensource.org
 
 # Contact us
 
-For further information please reach us at: [info@xeptagon.com](mailto:info@xeptagon.com)
+For further information please reach on: [GITHUB](https://github.com/w473/whois-ts)

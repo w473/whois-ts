@@ -1,6 +1,6 @@
 {
   "name": "whois-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Jacek Głogosz",
     "email": "jacek.glogosz@gmail.com"
@@ -34,10 +34,8 @@
   },
   "scripts": {
     "devBuild": "npm install && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "prepublish": "npm run clean && npm run build",
     "clean": "rm -rf ./dist/",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "prepublishOnly": "npm install --production && npm run build",
     "test": "jest --coverage"
   },
   "files": [
@@ -54,5 +52,6 @@
     "node-fetch": "2.7.0",
     "socks": "^2.8.1"
   },
-  "types": "./dist/esm/index.d.ts"
+  "types": "./dist/esm/index.d.ts",
+  "registry": "https://registry.npmjs.org"
 }
