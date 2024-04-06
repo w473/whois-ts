@@ -54,5 +54,10 @@
     "socks": "^2.8.1"
   },
   "types": "./dist/esm/index.d.ts",
-  "registry": "https://registry.npmjs.org"
+  "registry": "https://registry.npmjs.org",
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
 }
